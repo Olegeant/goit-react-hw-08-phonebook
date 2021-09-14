@@ -1,0 +1,8 @@
+.contactList {
+  align-self: flex-start;
+  max-width: 100%;
+}
+
+.notification {
+  color: brown;
+}

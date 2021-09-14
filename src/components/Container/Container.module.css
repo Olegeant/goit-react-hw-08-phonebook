@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+  border: 1px solid black;
+
+  clip-path: polygon(25px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25px);
+}
+
+.container.unframed {
+  clip-path: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}

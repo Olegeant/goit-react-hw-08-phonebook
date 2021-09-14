@@ -1,0 +1,115 @@
+.contactListItem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 400px;
+  padding: 8px 10px 8px 30px;
+
+  border-radius: 116px;
+  color: white;
+  background-color: #9090ff;
+
+  overflow: hidden;
+  cursor: default;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactListItem::before {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '\2726';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 18px;
+  padding-left: 2px;
+
+  color: transparent;
+  background-color: #404080;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contactListItem:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.contactMeta {
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.name {
+  max-width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.number {
+  color: yellow;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  right: 0;
+  height: 34px;
+  width: 34px;
+  padding: 5px;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: #404080;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactListItem:hover {
+  background-color: #8080ff;
+}
+
+.contactListItem:hover .button {
+  color: #8080ff;
+}
+
+.contactListItem:hover::before {
+  color: #8080ff;
+}
+
+.button.button:hover,
+.button.button:focus {
+  background-color: #202080;
+  color: yellow;
+}
+
+.button:focus {
+  box-shadow: 0px 0px 2px 3px white;
+}
+
+.CrossIcon {
+  fill: currentColor;
+}
